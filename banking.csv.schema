@@ -1,0 +1,49 @@
+{
+    "version": "1.0",
+    "rowId": "customerId",
+    "targetAttributeName": "willRespondToCampaign",
+    "dataFormat": "CSV",
+    "dataFileContainsHeader": false,
+    "attributes": [
+        {
+            "attributeName": "customerId",
+            "attributeType": "CATEGORICAL"
+        },
+        {
+            "attributeName": "jobId",
+            "attributeType": "CATEGORICAL"
+        },
+        {
+            "attributeName": "jobDescription",
+            "attributeType": "TEXT"
+        },
+        {
+            "attributeName": "education",
+            "attributeType": "CATEGORICAL"
+        },
+        {
+            "attributeName": "housing",
+            "attributeType": "CATEGORICAL"
+
+        },
+        {
+            "attributeName": "loan",
+            "attributeType": "CATEGORICAL"
+
+        },
+        {
+            "attributeName": "campaign",
+            "attributeType": "NUMERIC"
+        },
+        {
+            "attributeName": "duration",
+            "attributeType": "NUMERIC"
+        },
+
+        {
+            "attributeName": "willRespondToCampaign",
+            "attributeType": "BINARY"
+        }
+        
+    ]
+}

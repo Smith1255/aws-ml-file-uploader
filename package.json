@@ -1,0 +1,18 @@
+{
+  "name": "aws-ml-manager",
+  "version": "1.0.0",
+  "description": "Takes files from the root folder and processes them in Amazon's Machine Learning platform",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "author": "Andrew Smith",
+  "license": "ISC",
+  "dependencies": {
+    "aws-sdk": "^2.62.0",
+    "colors": "^1.1.2",
+    "csvdata": "^1.4.0",
+    "csvtojson": "^1.1.6",
+    "node-flag": "^1.5.1"
+  }
+}
