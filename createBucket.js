@@ -1,8 +1,9 @@
 var AWS = require('aws-sdk');
 var s3 = new AWS.S3();
+AWS.config.update({region:'us-east-1'});
 var colors = require('colors');
 
-fs = require('fs')
+fs = require('fs');
 
 var createBucket = function(bucketName, fileToUpload, dataSchema) {
     s3.createBucket({Bucket: bucketName}, function(err, data) {
@@ -11,6 +12,7 @@ var createBucket = function(bucketName, fileToUpload, dataSchema) {
             console.log(err);
         }
     });
+
     fs.readFile(fileToUpload, 'utf8', function (err, fileBuffer) {
         console.log('Reading File...'.bold);
         if (err) {
@@ -44,6 +46,4 @@ var createBucket = function(bucketName, fileToUpload, dataSchema) {
     });
 
 };
-
-createBucket(process.argv[2], process.argv[3], process.argv[4]);
 module.exports = createBucket;
