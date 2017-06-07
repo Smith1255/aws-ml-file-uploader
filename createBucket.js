@@ -5,12 +5,11 @@ var colors = require('colors');
 
 fs = require('fs');
 
-var createBucket = function(bucketName, fileToUpload, dataSchema) {
+module.exports = function(bucketName, fileToUpload, dataSchema) {
     s3.createBucket({Bucket: bucketName}, function(err, data) {
         console.log("Creating Bucket...".bold);
-        if (err) {
-            console.log(err);
-        }
+        console.log(data);
+        if (err) console.log(err);
     });
 
     fs.readFile(fileToUpload, 'utf8', function (err, fileBuffer) {
@@ -42,8 +41,5 @@ var createBucket = function(bucketName, fileToUpload, dataSchema) {
                 console.log("Successfully uploaded data to ".green + bucketName.bold + "/".bold + dataSchema.bold);
             }
         });
-
     });
-
 };
-module.exports = createBucket;
