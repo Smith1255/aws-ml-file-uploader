@@ -9,10 +9,13 @@
   "author": "Andrew Smith",
   "license": "ISC",
   "dependencies": {
+    "async": "^2.4.1",
     "aws-sdk": "^2.62.0",
     "colors": "^1.1.2",
     "csvdata": "^1.4.0",
     "csvtojson": "^1.1.6",
-    "node-flag": "^1.5.1"
+    "glob": "^7.1.2",
+    "node-flag": "^1.5.1",
+    "path": "^0.12.7"
   }
 }
