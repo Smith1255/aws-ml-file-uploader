@@ -75,7 +75,7 @@ var createBucket = function(bucketName, done) {
                 });
             });
         },
-        function(callback){
+        function(callback){ //Finds the required CSV Schema file and uploads it
             glob(path.join('requiredFiles/*.csv*'), globOptions, function(err, matches) {
                 var filePath = matches[1];
                 var dataSchema = filePath.substring(14);

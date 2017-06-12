@@ -63,26 +63,26 @@ function createParameters(done) {
     });
 }
 async.series([
-    function(callback) {
+    function(callback) { //Creates Parameters
         createParameters(function() {
             console.log("Parameters for bucket created.")
             callback(err);
         });
     },
-    function(callback){
+    function(callback){ //Creates Bucket
         createBucket(bucketName, function(err) {
             console.log("Created Bucket");
             callback(err);
         });
     },
-    function(callback){
+    function(callback){ //Creates Data Source for model
         machinelearning.createDataSourceFromS3(dataParams, function(err, data) {
             if (err) console.log("ERR" + err, err.stack); // an error occurred
             console.log('Data Source Created for ML');
             callback(err);
         });
     },
-    function(callback){
+    function(callback){ //Creates Machine Learning Model
         machinelearning.createMLModel(mlParams, function(err, data) {
             if (err) console.log(err, err.stack); // an error occurred
             else     console.log(data);           // successful response
