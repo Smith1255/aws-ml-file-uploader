@@ -15,6 +15,7 @@
     "csvdata": "^1.4.0",
     "csvtojson": "^1.1.6",
     "glob": "^7.1.2",
+    "jsonfile": "^3.0.0",
     "node-flag": "^1.5.1",
     "path": "^0.12.7"
   }
